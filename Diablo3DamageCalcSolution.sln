@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo3DataAccessor", "Diablo3DataAccessor\Diablo3DataAccessor.csproj", "{505CFB55-C9ED-4AC9-8ED0-4A77A8D07C73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo3DamageCalc", "Diablo3DamageCalc\Diablo3DamageCalc.csproj", "{B3273187-17B2-41C4-8F54-099D1D087A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{846E3CE0-F1E2-4AE7-A538-3A7FCB5634C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3DataContracts", "D3DataContracts\D3DataContracts.csproj", "{7B7D2283-4DBC-4AE9-BF3C-26E22C1DADFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505CFB55-C9ED-4AC9-8ED0-4A77A8D07C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505CFB55-C9ED-4AC9-8ED0-4A77A8D07C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505CFB55-C9ED-4AC9-8ED0-4A77A8D07C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505CFB55-C9ED-4AC9-8ED0-4A77A8D07C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3273187-17B2-41C4-8F54-099D1D087A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3273187-17B2-41C4-8F54-099D1D087A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3273187-17B2-41C4-8F54-099D1D087A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3273187-17B2-41C4-8F54-099D1D087A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846E3CE0-F1E2-4AE7-A538-3A7FCB5634C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846E3CE0-F1E2-4AE7-A538-3A7FCB5634C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846E3CE0-F1E2-4AE7-A538-3A7FCB5634C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846E3CE0-F1E2-4AE7-A538-3A7FCB5634C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7D2283-4DBC-4AE9-BF3C-26E22C1DADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7D2283-4DBC-4AE9-BF3C-26E22C1DADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7D2283-4DBC-4AE9-BF3C-26E22C1DADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7D2283-4DBC-4AE9-BF3C-26E22C1DADFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

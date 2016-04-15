@@ -1,4 +1,4 @@
-﻿@model Diablo3DamageCalc.Models.HeroesModel
+﻿@model Diablo3DamageCalc.Models.ProfileModel
 @{
     ViewBag.Title = "D3Profile";
 }
@@ -11,14 +11,17 @@
 
 @if (Model.PlayerProfile != null)
 {
-    @Html.LabelFor(m => m.SelectedHero);
-    @Html.DropDownListFor( m => m.SelectedHero, Model.HeroNames)
-    @Html.ValidationMessageFor(m => m.SelectedHero)
-    <input type="submit" value="Submit" name="ActionRegister"/>
-    @*@Html.ActionLink("test","HeroProfile","Home")*@
+    using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        @Html.LabelFor(m => m.SelectedHero);
+        @Html.DropDownListFor(m => m.SelectedHero, Model.HeroNames)
+        @Html.ValidationMessageFor(m => m.SelectedHero)
+        <input type="submit" value="Submit" name="ActionRegister" />
+    }
 }
 else {
-    <h4> No Heroes Found!</h4>
+    <h4> No Heroes Found! </h4>
 }
 
 

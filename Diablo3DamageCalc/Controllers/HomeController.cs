@@ -9,7 +9,6 @@ namespace Diablo3DamageCalc.Controllers
     {
 
         public static ProfileModel playerModel = new ProfileModel();
-        public static HeroesModel heroesModel = new HeroesModel();
 
         public ActionResult Index()
         {
@@ -23,6 +22,7 @@ namespace Diablo3DamageCalc.Controllers
             {
 
                 playerModel.BattleTag = profile.BattleTag;
+                playerModel.PlayerProfile = Diablo3ApiCalls.GetPlayerProfile(playerModel.BattleTag);
                 return RedirectToAction("PlayerProfile");
             }
 
@@ -45,13 +45,7 @@ namespace Diablo3DamageCalc.Controllers
 
         public ActionResult PlayerProfile()
         {
-            playerModel.PlayerProfile = Diablo3ApiCalls.GetPlayerProfile(playerModel.BattleTag);
-
-            heroesModel.PlayerProfile = playerModel.PlayerProfile;
-
-            ViewBag.PlayerName = playerModel.BattleTag;
-
-            return View(heroesModel);
+            return View(playerModel);
         }
 
         [HttpPost]
@@ -59,7 +53,7 @@ namespace Diablo3DamageCalc.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return Redirect("HeroProfile");
             }
 
             return View(model);

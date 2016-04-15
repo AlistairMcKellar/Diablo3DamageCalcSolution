@@ -18,12 +18,20 @@ namespace D3DataContracts.Deserializer
             {
                 JObject o = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
 
-                string battleTag = (string)o["battleTag"];
+                //string battleTag = (string)o["battleTag"];
 
-                var heroes = from h in o["heroes"]
-                             select new Hero((string)h["name"], (string)h["id"]);
+                try
+                {
+                    var heroes = from h in o["heroes"]
+                                 select new Hero((string)h["name"], (string)h["id"]);
 
-                profile = new PlayerProfile(battleTag, heroes);
+                    profile = new PlayerProfile(heroes);
+                }
+                catch (ArgumentNullException)
+                {
+                    return null;
+                }
+
 
             }
 

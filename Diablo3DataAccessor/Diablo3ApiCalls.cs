@@ -18,8 +18,6 @@ namespace Diablo3DataAccessor
         private const string APIKEY = "ehug4yduftqymcjm4wxfvupyptrev6q9";
         #endregion
         // private const string APIKEY = <yourkeyhere>;
-        private static string battleTag = @"Davnel-2383";
-        private static string heroId = @"38843";
         private static string urlStart = @"https://eu.api.battle.net/d3/";
         private static string profile = @"profile/";
         private static string hero = @"hero/";
@@ -28,18 +26,17 @@ namespace Diablo3DataAccessor
         private static string apiKey = @"&apikey=";
 
 
-        public static PlayerProfile GetPlayerProfile()
+        public static PlayerProfile GetPlayerProfile(string battleTag)
         {
-
             try
             {
                 string profileRequest = $"{urlStart}{profile}{battleTag}{backSlash}{locale}{apiKey}{APIKEY}";
                 var response = MakeRequest(profileRequest);
-                return JsonDeserialiser.ProfileDeserializer(response);
+                PlayerProfile serializedProfile = JsonDeserialiser.ProfileDeserializer(response);
+                return (serializedProfile != null ? serializedProfile : null);
             }
             catch (Exception)
             {
-
                 return null;
             }
 
@@ -57,7 +54,7 @@ namespace Diablo3DataAccessor
         private static async Task<Stream> MakeRequestAsync(string requestUri)
         {
             int tries = 3;
-            
+
             HttpClient httpClient = new HttpClient();
             var stream = new MemoryStream();
 

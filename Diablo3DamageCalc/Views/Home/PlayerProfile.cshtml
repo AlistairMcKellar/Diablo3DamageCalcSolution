@@ -1,16 +1,24 @@
-﻿@model Diablo3DamageCalc.Models.ProfileModel
+﻿@model Diablo3DamageCalc.Models.HeroesModel
 @{
     ViewBag.Title = "D3Profile";
 }
 
-<h2>Player Profile</h2>
+<h2> @(!string.IsNullOrEmpty(ViewBag.BattleTag) ? ViewBag.BattleTag : "Player") Profile</h2>
 
-<p>@Model.PlayerProfile.BattleTag</p><br />
 
 <h3>Heroes</h3>
-<ul>
-    @foreach (var hero in Model.PlayerProfile.Heroes)
-    {
-        <li>@hero.Name - @hero.Id</li>
-    }
-</ul>
+
+
+@if (Model.PlayerProfile != null)
+{
+    @Html.LabelFor(m => m.SelectedHero);
+    @Html.DropDownListFor( m => m.SelectedHero, Model.HeroNames)
+    @Html.ValidationMessageFor(m => m.SelectedHero)
+    <input type="submit" value="Submit" name="ActionRegister"/>
+    @*@Html.ActionLink("test","HeroProfile","Home")*@
+}
+else {
+    <h4> No Heroes Found!</h4>
+}
+
+

@@ -1,20 +1,25 @@
 ﻿using D3DataContracts;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.Routing;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Diablo3DamageCalc.Models
 {
     public class ProfileModel
     {
-        public PlayerProfile PlayerProfile { get; private set; }
+        [Required]
+        [DisplayName("BattleTag")]
+        [RegularExpression(@"[a-zA-Z]*-[0-9]*$", ErrorMessage = "BattleTag should be of the format name-1234")]
+        public string BattleTag { get; set; }
 
-        public ProfileModel(PlayerProfile playerProfile)
+        public PlayerProfile PlayerProfile { get; set; }
+
+        public ProfileModel()
         {
-            PlayerProfile = playerProfile;
+            PlayerProfile = new PlayerProfile();
         }
+
+        //Html.DropDownListFor(m => m.chosenPlaylist.PlaylistId, (SelectList)ViewBag.chosenId)).
+        //    Html.DropDownListFor( m => m.SelectedHero, Model.HeroNames)
+
     }
-    }
+}

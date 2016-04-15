@@ -9,14 +9,21 @@ namespace D3DataContracts
 {
     public class PlayerProfile
     {
-        public string BattleTag { get; private set; }
         public IEnumerable<Hero> Heroes { get; private set; }
 
-        public PlayerProfile(string battleTag, IEnumerable<Hero> heroes)
+        public PlayerProfile(IEnumerable<Hero> heroes)
         {
-            BattleTag = battleTag;
             Heroes = heroes;
         }
-        
+
+        public PlayerProfile()
+        {
+            Heroes = new List<Hero>();
+        }
+
+        public void AddHeroesToProfile(IEnumerable<Hero> heroes)
+        {
+            Heroes = heroes;
+        }
     }
 }

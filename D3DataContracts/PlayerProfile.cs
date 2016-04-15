@@ -9,21 +9,30 @@ namespace D3DataContracts
 {
     public class PlayerProfile
     {
-        public IEnumerable<Hero> Heroes { get; private set; }
+        public IList<ProfileHeroDetails> Heroes { get; private set; }
 
-        public PlayerProfile(IEnumerable<Hero> heroes)
+        public PlayerProfile(IList<ProfileHeroDetails> heroes)
         {
             Heroes = heroes;
         }
 
         public PlayerProfile()
         {
-            Heroes = new List<Hero>();
+            Heroes = new List<ProfileHeroDetails>();
         }
 
-        public void AddHeroesToProfile(IEnumerable<Hero> heroes)
+        public void UpdateSelectedHero(int selectedHero, Hero hero)
         {
-            Heroes = heroes;
+            if (Heroes.Any(h => h.Id == selectedHero))
+            {
+                int index = Heroes.IndexOf(Heroes.SingleOrDefault(h => h.Id == selectedHero));
+                Heroes[index].Hero = hero;
+            }
+        }
+
+        public Hero GetSelectedHero(int selectedHero)
+        {
+            return  Heroes.SingleOrDefault(h => h.Id == selectedHero).Hero;
         }
     }
 }

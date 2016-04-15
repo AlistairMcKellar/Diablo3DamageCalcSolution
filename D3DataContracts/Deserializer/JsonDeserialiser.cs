@@ -23,9 +23,9 @@ namespace D3DataContracts.Deserializer
                 try
                 {
                     var heroes = from h in o["heroes"]
-                                 select new Hero((string)h["name"], (string)h["id"]);
+                                 select new ProfileHeroDetails((string)h["name"], (int)h["id"], (string)h["class"], (int)h["level"], (bool)h["seasonal"]);
 
-                    profile = new PlayerProfile(heroes);
+                    profile = new PlayerProfile(heroes.ToList());
                 }
                 catch (ArgumentNullException)
                 {
@@ -38,5 +38,15 @@ namespace D3DataContracts.Deserializer
             return profile;
         }
 
+        public static Hero HeroDeserializer(Stream response)
+        {
+            Hero hero;
+            using (StreamReader reader = new StreamReader(response))
+            {
+                string json = reader.ReadToEnd();
+                hero = JsonConvert.DeserializeObject<Hero>(json);
+            }
+            return hero;
+        }
     }
 }

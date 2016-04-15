@@ -26,7 +26,7 @@ namespace Diablo3DamageCalc.Models
                 var allHeroes = PlayerProfile.Heroes.Select(h => new SelectListItem
                 {
                     Value = h.Id.ToString(),
-                    Text = h.Name
+                    Text = h.ToString()
                 });
                 return allHeroes;
             }
@@ -36,9 +36,6 @@ namespace Diablo3DamageCalc.Models
         {
             PlayerProfile = new PlayerProfile();
         }
-
-        //Html.DropDownListFor(m => m.chosenPlaylist.PlaylistId, (SelectList)ViewBag.chosenId)).
-        //    Html.DropDownListFor( m => m.SelectedHero, Model.HeroNames)
 
     }
 }

@@ -14,10 +14,11 @@
     using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.BattleTag);
         @Html.LabelFor(m => m.SelectedHero);
         @Html.DropDownListFor(m => m.SelectedHero, Model.HeroNames)
         @Html.ValidationMessageFor(m => m.SelectedHero)
-        <input type="submit" value="Submit" name="ActionRegister" />
+        <input type="submit" value="Submit" />
     }
 }
 else {

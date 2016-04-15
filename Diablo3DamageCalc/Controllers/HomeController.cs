@@ -53,6 +53,8 @@ namespace Diablo3DamageCalc.Controllers
         {
             if (ModelState.IsValid)
             {
+                playerModel.SelectedHero = model.SelectedHero;
+                playerModel.PlayerProfile.UpdateSelectedHero(model.SelectedHero, Diablo3ApiCalls.GetHeroDetails(playerModel.BattleTag, playerModel.SelectedHero));
                 return Redirect("HeroProfile");
             }
 
@@ -61,7 +63,9 @@ namespace Diablo3DamageCalc.Controllers
 
         public ActionResult HeroProfile()
         {
-            return View();
+            HeroesModel model = new HeroesModel();
+            model.Hero = playerModel.PlayerProfile.GetSelectedHero(playerModel.SelectedHero);
+            return View(model);
         }
     }
 }

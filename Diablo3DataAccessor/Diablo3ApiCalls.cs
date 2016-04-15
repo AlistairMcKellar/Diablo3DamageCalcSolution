@@ -20,7 +20,7 @@ namespace Diablo3DataAccessor
         // private const string APIKEY = <yourkeyhere>;
         private static string urlStart = @"https://eu.api.battle.net/d3/";
         private static string profile = @"profile/";
-        private static string hero = @"hero/";
+        private static string heroUrl = @"hero/";
         private static string backSlash = @"/";
         private static string locale = @"?local=en_gb";
         private static string apiKey = @"&apikey=";
@@ -42,7 +42,24 @@ namespace Diablo3DataAccessor
 
         }
 
-        public static Stream MakeRequest(string requestUrl)
+
+        public static Hero GetHeroDetails(string battleTag, int selectedHero)
+        {
+            try
+            {
+                string profileRequest = $"{urlStart}{profile}{battleTag}{backSlash}{heroUrl}{selectedHero}{locale}{apiKey}{APIKEY}";
+                var response = MakeRequest(profileRequest);
+                Hero hero = JsonDeserialiser.HeroDeserializer(response);
+                return (hero != null ? hero : null);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+
+        private static Stream MakeRequest(string requestUrl)
         {
             var task = MakeRequestAsync(requestUrl);
 

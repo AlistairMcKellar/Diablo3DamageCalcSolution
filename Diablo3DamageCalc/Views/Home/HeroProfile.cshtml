@@ -1,7 +1,44 @@
-﻿
+﻿@model Diablo3DamageCalc.Models.HeroesModel
 @{
     ViewBag.Title = "HeroProfile";
 }
 
 <h2>HeroProfile</h2>
 
+<h3>@Model.Hero.name</h3>
+
+<h3>active skills</h3>
+<ul>
+    @foreach (var item in Model.Hero.skills.active)
+    {
+        <li>@item.skill.name - @item.rune.name</li>
+    }
+</ul>
+
+<h3>Passive skills</h3>
+<ul>
+    @foreach (var item in Model.Hero.skills.passive)
+    {
+        <li>@item.skill.name</li>
+    }
+</ul>
+
+<h3>items</h3>
+@{ var items = Model.Hero.items;
+    <ul>
+        <li>@items.head.name</li>
+        <li>@items.torso.name</li>
+        <li>@items.feet.name</li>
+        <li>@items.hands.name</li>
+        <li>@items.shoulders.name</li>
+        <li>@items.legs.name</li>
+        <li>@items.bracers.name</li>
+        <li>@items.mainHand.name</li>
+        <li>@items.offHand.name</li>
+        <li>@items.waist.name</li>
+        <li>@items.rightFinger.name</li>
+        <li>@items.leftFinger.name</li>
+        <li>@items.neck.name</li>
+
+</ul>
+}

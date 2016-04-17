@@ -8,6 +8,6 @@ namespace Diablo3DataAccessor
 {
     public class ApiKeys
     {
-        public const string D3ApiKey = "";
+        public const string D3ApiKey = "123";
     }
 }

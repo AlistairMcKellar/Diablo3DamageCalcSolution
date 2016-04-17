@@ -14,10 +14,7 @@ namespace Diablo3DataAccessor
 {
     public class Diablo3ApiCalls
     {
-        #region APIKEY
-        private const string APIKEY = "ehug4yduftqymcjm4wxfvupyptrev6q9";
-        #endregion
-        // private const string APIKEY = <yourkeyhere>;
+        private const string APIKEY = ApiKeys.D3ApiKey;
         private static string urlStart = @"https://eu.api.battle.net/d3/";
         private static string profile = @"profile/";
         private static string heroUrl = @"hero/";

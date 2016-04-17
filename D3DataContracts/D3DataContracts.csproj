@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Deserializer\JsonDeserialiser.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="ProfileHeroDetails.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="PlayerProfile.cs" />

@@ -3,23 +3,23 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+@if (ViewBag.NoPlayerFound)
+{
+    <h3 class="validation-summary-errors">Id Not found</h3>
+}
 
-
-</div>
-<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>BattleTag</legend>
-
-        @Html.EditorFor(Model => Model.BattleTag)
-    </fieldset>
+    @Html.EditorFor(Model => Model.BattleTag)
+    @Html.ValidationMessageFor(Model => Model.BattleTag)
 
     <p>
-        <input type="submit" value="View D3 Profile" class="btn btn-primary btn-lg"/>
+        <input type="submit" value="View D3 Profile" class="btn btn-primary btn-lg" />
     </p>
 }
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+} 

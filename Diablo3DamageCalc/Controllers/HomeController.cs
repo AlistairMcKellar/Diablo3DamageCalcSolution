@@ -12,6 +12,7 @@ namespace Diablo3DamageCalc.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.NoPlayerFound = false;
             return View(playerModel);
         }
 
@@ -23,24 +24,15 @@ namespace Diablo3DamageCalc.Controllers
 
                 playerModel.BattleTag = profile.BattleTag;
                 playerModel.PlayerProfile = Diablo3ApiCalls.GetPlayerProfile(playerModel.BattleTag);
-                return RedirectToAction("PlayerProfile");
+                if (playerModel.PlayerProfile != null)
+                {
+                    return RedirectToAction("PlayerProfile");
+                }
+
+                ViewBag.NoPlayerFound = true;
             }
 
             return View(profile);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
 
         public ActionResult PlayerProfile()

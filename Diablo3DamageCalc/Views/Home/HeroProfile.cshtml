@@ -3,42 +3,37 @@
     ViewBag.Title = "HeroProfile";
 }
 
-<h2>HeroProfile</h2>
+<h2>@Model.Hero.name</h2>
 
-<h3>@Model.Hero.name</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"><p>stats</p></div>
+        <div class="col-md-8"><p>stats2</p></div>
+    </div>
 
-<h3>active skills</h3>
-<ul>
-    @foreach (var item in Model.Hero.skills.active)
-    {
-        <li>@item.skill.name - @item.rune.name</li>
+    @{
+        for (int i = 0; i < Model.Hero.skills.active.Length; i++)
+
+        {
+            D3DataContracts.Skill skill;
+            D3DataContracts.Rune rune;
+            if (i % 3 == 0)
+            {
+                <div class="row">
+                    @for (int j = i; j < i + 3; j++)
+                    {
+                        skill = Model.Hero.skills.active[j].skill;
+                        rune = Model.Hero.skills.active[j].rune;
+                            <div class="col-md-4">
+                                <p><strong> Skill: @skill.name</strong></p>
+                                <p>@skill.description</p>
+                                <p><strong>Rune: @rune.name</strong></p>
+                                <p>@rune.description</p>
+                            </div>
+                    }
+
+                </div>
+            }
+        }
     }
-</ul>
-
-<h3>Passive skills</h3>
-<ul>
-    @foreach (var item in Model.Hero.skills.passive)
-    {
-        <li>@item.skill.name</li>
-    }
-</ul>
-
-<h3>items</h3>
-@{ var items = Model.Hero.items;
-    <ul>
-        <li>@items.head.name</li>
-        <li>@items.torso.name</li>
-        <li>@items.feet.name</li>
-        <li>@items.hands.name</li>
-        <li>@items.shoulders.name</li>
-        <li>@items.legs.name</li>
-        <li>@items.bracers.name</li>
-        <li>@items.mainHand.name</li>
-        <li>@items.offHand.name</li>
-        <li>@items.waist.name</li>
-        <li>@items.rightFinger.name</li>
-        <li>@items.leftFinger.name</li>
-        <li>@items.neck.name</li>
-
-</ul>
-}
+</div>

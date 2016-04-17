@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace D3DataContracts
 {
@@ -88,144 +89,50 @@ namespace D3DataContracts
 
     public class Items
     {
-        public Head head { get; set; }
-        public Torso torso { get; set; }
-        public Feet feet { get; set; }
-        public Hands hands { get; set; }
-        public Shoulders shoulders { get; set; }
-        public Legs legs { get; set; }
-        public Bracers bracers { get; set; }
-        public Mainhand mainHand { get; set; }
-        public Offhand offHand { get; set; }
-        public Waist waist { get; set; }
-        public Rightfinger rightFinger { get; set; }
-        public Leftfinger leftFinger { get; set; }
+        public Head head { get; private set; }
+        public Torso torso { get; private set; }
+        public Feet feet { get; private set; }
+        public Hands hands { get; private set; }
+        public Shoulders shoulders { get; private set; }
+        public Legs legs { get; private set; }
+        public Bracers bracers { get; private set; }
+        public Mainhand mainHand { get; private set; }
+        public Offhand offHand { get; private set; }
+        public Waist waist { get; private set; }
+        public Rightfinger rightFinger { get; private set; }
+        public Leftfinger leftFinger { get; private set; }
         public Neck neck { get; set; }
-    }
+        [JsonIgnore]
+        public List<Item> items { get; private set; }
 
-    public class Head
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
+        public Items()
+        {
 
-    public class Torso
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
+        }
 
-    public class Feet
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
+        [JsonConstructor]
+        public Items(Head head, Torso torso, Feet feet, Hands hands, Shoulders shoulders, Legs legs, Bracers bracers, Mainhand mainHand,
+            Offhand offHand, Waist waist, Rightfinger rightFinger, Leftfinger leftFinger, Neck neck)
+        {
+            this.head = head;
+            this.torso = torso;
+            this.feet = feet;
+            this.hands = hands;
+            this.shoulders = shoulders;
+            this.legs = legs;
+            this.bracers = bracers;
+            this.mainHand = mainHand;
+            this.offHand = offHand;
+            this.waist = waist;
+            this.rightFinger = rightFinger;
+            this.leftFinger = leftFinger;
+            this.neck = neck;
 
-    public class Hands
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
+            items = new List<Item>() { this.head, this.torso, this.feet, this.hands, this.shoulders, this.legs, this.bracers, this.mainHand,
+                this.offHand, this.waist, rightFinger, leftFinger, this.neck };
 
-    public class Shoulders
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
+        }
 
-    public class Legs
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
-
-    public class Bracers
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-    }
-
-    public class Mainhand
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-    }
-
-    public class Offhand
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-    }
-
-    public class Waist
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-    }
-
-    public class Rightfinger
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
-
-    public class Leftfinger
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
-        public string[] setItemsEquipped { get; set; }
-    }
-
-    public class Neck
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string icon { get; set; }
-        public string displayColor { get; set; }
-        public string tooltipParams { get; set; }
     }
 
     public class Followers

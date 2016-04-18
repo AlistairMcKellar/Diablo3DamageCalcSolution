@@ -7,18 +7,21 @@
 {
     <h3 class="validation-summary-errors">Id Not found</h3>
 }
+<div class="panel col-md-12">
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary(true)
+            @Html.EditorFor(Model => Model.BattleTag)
+            @Html.ValidationMessageFor(Model => Model.BattleTag)
 
-    @Html.EditorFor(Model => Model.BattleTag)
-    @Html.ValidationMessageFor(Model => Model.BattleTag)
-
-    <p>
-        <input type="submit" value="View D3 Profile" class="btn btn-primary btn-lg" />
-    </p>
-}
+            <p>
+                <input type="submit" value="View D3 Profile" class="btn btn-primary btn-lg" />
+            </p>
+        }
+    </div>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

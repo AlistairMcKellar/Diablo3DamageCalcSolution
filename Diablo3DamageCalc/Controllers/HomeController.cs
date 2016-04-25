@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using Diablo3DamageCalc.Models;
-using D3DataContracts;
 using Diablo3DataAccessor;
 
 namespace Diablo3DamageCalc.Controllers
@@ -46,18 +45,11 @@ namespace Diablo3DamageCalc.Controllers
             if (ModelState.IsValid)
             {
                 playerModel.SelectedHero = model.SelectedHero;
-                playerModel.PlayerProfile.UpdateSelectedHero(model.SelectedHero, Diablo3ApiCalls.GetHeroDetails(playerModel.BattleTag, playerModel.SelectedHero));
-                return Redirect("HeroProfile");
+                return RedirectToAction("Index", "Hero", new { battleTag = model.BattleTag, selectedHero = model.SelectedHero });
             }
 
-            return View(model);
+            return View(playerModel);
         }
 
-        public ActionResult HeroProfile()
-        {
-            HeroesModel model = new HeroesModel();
-            model.Hero = playerModel.PlayerProfile.GetSelectedHero(playerModel.SelectedHero);
-            return View(model);
-        }
     }
 }

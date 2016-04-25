@@ -1,0 +1,12 @@
+﻿@section JavascriptInHead {
+    <script src="~/Scripts/Hero/hero-controller.js"></script>
+    <script src="~/Scripts/Hero/hero-repository.js"></script>
+}
+
+<div  ng-init="battleTag='@ViewBag.battleTag';selectedHero=@ViewBag.selectedHero" >
+    
+    <section ng-controller="HeroProfileController" ng-include="'/Templates/HeroProfile.html'"></section>
+</div>
+
+<script type="text/javascript" src="~/Scripts/D3ToolTips.js"></script>
+

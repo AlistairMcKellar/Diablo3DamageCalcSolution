@@ -1,11 +1,16 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="heroModule">
 <head>
+    <base href="/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="~/Scripts/hero-module.js"></script>
+    @RenderSection("JavascriptInHead", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

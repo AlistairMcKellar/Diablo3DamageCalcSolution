@@ -1,14 +1,11 @@
-﻿@model Diablo3DamageCalc.Models.HeroesModel
-@{
-    ViewBag.Title = "HeroProfile";
-}
-
-<h2>@Model.Hero.name</h2>
+﻿<h2>HeroProfile - {{hero.heroName}} - heroClass</h2>
 
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="profile-container-top"><p>stats</p></div>
+            <div class="profile-container-top">
+                <p>stats</p>
+            </div>
         </div>
         <div class="col-md-8">
             <div class="profile-container-top">
@@ -312,17 +309,15 @@
 
                     <ul class="gear-labels" id="gear-labels">
 
-
-
                         <li class="gear-label slot-head">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-mask" data-d3tooltip="item/CnAIh7m80AISBwgEFXMsRIkdS7X5Sx1xi3fwHd6C_OUd5hXbDR1mIwZQHcr6vKAwi1o4twNAAFASWARgtwNqKQoMCAAQ0bfV2YGAgMAIEhkIp-HVlgUSBwgEFYy-HMIwj1I4AEABkAEFgAFGtQF_-U5dGJnO3usOUABYAqABmc7e6w6gAdnP7uAOoAHX78L7BaABiN2D-AGgAabR65QGoAH6jpGsDw" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Mask</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+913</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">117</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-67 long-bonus       " style="display:none"><p>Critical Hit Chance Increased by <span class="value">5.0</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-102 long-bonus       " style="display:none"><p>Reduces cooldown of all skills by <span class="value">12.0</span><span class="value">%</span>.</p></span>
-                                <span class="bonus-value bonus-246 long-bonus       " style="display:none"><p>Increases Gold and Health Pickup by <span class="value">2</span> Yards.</p></span>
-                                <span class="bonus-value bonus-247 long-bonus       " style="display:none"><p>Reduces duration of control impairing effects by <span class="value">27</span><span class="value">%</span></p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+913</span> Dexterity</span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">117</span> Resistance to All Elements</span>
+                                <span class="bonus-value bonus-67 long-bonus       " style="display:none">Critical Hit Chance Increased by <span class="value">5.0</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus-102 long-bonus       " style="display:none">Reduces cooldown of all skills by <span class="value">12.0</span><span class="value">%</span>.</span>
+                                <span class="bonus-value bonus-246 long-bonus       " style="display:none">Increases Gold and Health Pickup by <span class="value">2</span> Yards.</></span>
+                                <span class="bonus-value bonus-247 long-bonus       " style="display:none">Reduces duration of control impairing effects by <span class="value">27</span><span class="value">%</span></></span>
                             </a>
 
                         </li>
@@ -332,11 +327,11 @@
                         <li class="gear-label slot-torso">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-bane" data-d3tooltip="item/CuIBCIzKmYUDEgcIBBVEd4APHfHTatUdcyMGUB07J28kHSa1HZUdrNOZOR0_8gnYMItSOJgDQABQElgEYJgDaisKDAgAEN2svtyHgICgDhIbCJyirLoEEgcIBBVCLTepMI9SOABAAVgEkAEFaisKDAgAEOfMg9OCgIDgOhIbCNWzm5MHEgcIBBVCLTepMI9SOABAAVgEkAEFaisKDAgAEOPNg9OCgIDgOhIbCPThyZQBEgcIBBVCLTepMI9SOABAAVgEkAEFgAFGpQEmtR2VrQFDTkRRtQExIhlguAGJ5crDD8ABBhiI3YP4AVAAWAKgAZnO3usOoAHZz-7gDqAB1-_C-wWgAYjdg_gBoAGm0euUBqAB-o6RrA8" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Bane</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+1339</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+499</span> Vitality</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">99</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-153 long-bonus       " style="display:none"><p><span class="value">+35</span><span class="value">%</span> Extra Gold from Monsters</p></span>
-                                <span class="bonus-value bonus-275 long-bonus       " style="display:none"><p>Health Globes and Potions Grant <span class="value">+23346</span> Life.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+1339</span> Dexterity</></span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+499</span> Vitality</></span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">99</span> Resistance to All Elements</></span>
+                                <span class="bonus-value bonus-153 long-bonus       " style="display:none"><span class="value">+35</span><span class="value">%</span> Extra Gold from Monsters</></span>
+                                <span class="bonus-value bonus-275 long-bonus       " style="display:none">Health Globes and Potions Grant <span class="value">+23346</span> Life.</></span>
                             </a>
 
                         </li>
@@ -346,12 +341,12 @@
                         <li class="gear-label slot-feet">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-heels" data-d3tooltip="item/CloIs97SexIHCAQVFKRH0B2s05k5HT_yCdgdOydvJB1gniZHHUNORFEd8dNq1TCLUjiTA0AAUBJYBGCTA4ABRqUBYJ4mR60B6-LkBbUBoEWbf7gBvrqL-wvAAQQY1-_C-wVQAFgCoAGZzt7rDqAB2c_u4A6gAdfvwvsFoAGI3YP4AaABptHrlAagAfqOkawP" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Heels</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+458</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+423</span> Vitality</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">97</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-126 long-bonus       " style="display:none"><p><span class="value">+10</span><span class="value">%</span> Movement Speed</p></span>
-                                <span class="bonus-value bonus-153 long-bonus       " style="display:none"><p><span class="value">+33</span><span class="value">%</span> Extra Gold from Monsters</p></span>
-                                <span class="bonus-value bonus-275 long-bonus       " style="display:none"><p>Health Globes and Potions Grant <span class="value">+25306</span> Life.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+458</span> Dexterity</></span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+423</span> Vitality</></span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">97</span> Resistance to All Elements</></span>
+                                <span class="bonus-value bonus-126 long-bonus       " style="display:none"><span class="value">+10</span><span class="value">%</span> Movement Speed</></span>
+                                <span class="bonus-value bonus-153 long-bonus       " style="display:none"><span class="value">+33</span><span class="value">%</span> Extra Gold from Monsters</></span>
+                                <span class="bonus-value bonus-275 long-bonus       " style="display:none">Health Globes and Potions Grant <span class="value">+25306</span> Life.</></span>
                             </a>
 
                         </li>
@@ -361,12 +356,12 @@
                         <li class="gear-label slot-hands">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-grasp" data-d3tooltip="item/ClsI3rzXvQISBwgEFb0jwnodcYt38B0WSfSHHbi8IHodnAYAyx1-VrMuHcr6vKAwi1o4ygJAAFASWARgygKAAUalAbi8IHqtAZinjsC1AclbkqS4AYvZh_4IwAEIGPqOkawPUABYAqABmc7e6w6gAdnP7uAOoAHX78L7BaABiN2D-AGgAabR65QGoAH6jpGsDw" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Grasp</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+964</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+939</span> Vitality</p></span>
-                                <span class="bonus-value bonus-64 long-bonus       " style="display:none"><p>Critical Hit Damage Increased by <span class="value">35.0</span><span class="value">%</span> </p></span>
-                                <span class="bonus-value bonus-67 long-bonus       " style="display:none"><p>Critical Hit Chance Increased by <span class="value">9.5</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-131 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">183</span> Arcane Resistance</p></span>
-                                <span class="bonus-value bonus-246 long-bonus       " style="display:none"><p>Increases Gold and Health Pickup by <span class="value">2</span> Yards.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+964</span> Dexterity</></span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+939</span> Vitality</></span>
+                                <span class="bonus-value bonus-64 long-bonus       " style="display:none">Critical Hit Damage Increased by <span class="value">35.0</span><span class="value">%</span> </></span>
+                                <span class="bonus-value bonus-67 long-bonus       " style="display:none">Critical Hit Chance Increased by <span class="value">9.5</span><span class="value">%</span></></span>
+                                <span class="bonus-value bonus-131 long-bonus       " style="display:none"><span class="value">+</span><span class="value">183</span> Arcane Resistance</></span>
+                                <span class="bonus-value bonus-246 long-bonus       " style="display:none">Increases Gold and Health Pickup by <span class="value">2</span> Yards.</></span>
                             </a>
 
                         </li>
@@ -376,12 +371,12 @@
                         <li class="gear-label slot-shoulders">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-burden" data-d3tooltip="item/ClsI76C3vAgSBwgEFRMs8okd8dNq1R07J28kHUNORFEduLwgeh3ErTlcHazTmTkwi1I41wJAAFASWARg1wKAAUalAfHTatWtAfHTatW1AdL4yBW4Ad2v9JYDwAEGGNnP7uAOUABYAqABmc7e6w6gAdnP7uAOoAHX78L7BaABiN2D-AGgAabR65QGoAH6jpGsDw" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Burden</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+497</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+486</span> Vitality</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">96</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-102 long-bonus       " style="display:none"><p>Reduces cooldown of all skills by <span class="value">6.0</span><span class="value">%</span>.</p></span>
-                                <span class="bonus-value bonus-203 long-bonus       " style="display:none"><p><span class="value">+6556</span> Thorns Damage</p></span>
-                                <span class="bonus-value bonus-275 long-bonus       " style="display:none"><p>Health Globes and Potions Grant <span class="value">+24986</span> Life.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+497</span> Dexterity</></span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+486</span> Vitality</></span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">96</span> Resistance to All Elements</></span>
+                                <span class="bonus-value bonus-102 long-bonus       " style="display:none">Reduces cooldown of all skills by <span class="value">6.0</span><span class="value">%</span>.</></span>
+                                <span class="bonus-value bonus-203 long-bonus       " style="display:none"><span class="value">+6556</span> Thorns Damage</span>
+                                <span class="bonus-value bonus-275 long-bonus       " style="display:none">Health Globes and Potions Grant <span class="value">+24986</span> Life.</span>
                             </a>
 
                         </li>
@@ -391,11 +386,11 @@
                         <li class="gear-label slot-legs">
                             <a href="http://eu.battle.net/d3/en/item/the-shadows-coil" data-d3tooltip="item/Cp8BCLWL56sDEgcIBBVTdE0xHfHTatUdj5DKUB04neQEHUNORFEdf46HzB3TzAdjMItSOI0CQABQElgEYI0CaisKDAgAEI-E7sSBgIDgCxIbCNXVt_ULEgcIBBVCLTepMItSOABAAVgEkAEFaisKDAgAEJ2pg9OCgIDgOhIbCN68pbAKEgcIBBVCLTepMI9SOABAAVgEkAEFgAFGtQGfktWlGKbR65QGUABYAqABmc7e6w6gAdnP7uAOoAHX78L7BaABiN2D-AGgAabR65QGoAH6jpGsDw" class="label-link d3-color-green">
                                 <span class="item-name">The Shadow's Coil</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+1011</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+434</span> Vitality</p></span>
-                                <span class="bonus-value bonus-60 long-bonus       " style="display:none"><p><span class="value">+562</span> Armor</p></span>
-                                <span class="bonus-value bonus-130 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">147</span> Lightning Resistance</p></span>
-                                <span class="bonus-value bonus-273 long-bonus       " style="display:none"><p>Ignores Durability Loss</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+1011</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+434</span> Vitality</span>
+                                <span class="bonus-value bonus-60 long-bonus       " style="display:none"><span class="value">+562</span> Armor</span>
+                                <span class="bonus-value bonus-130 long-bonus       " style="display:none"><span class="value">+</span><span class="value">147</span> Lightning Resistance</span>
+                                <span class="bonus-value bonus-273 long-bonus       " style="display:none">Ignores Durability Loss</span>
                             </a>
 
                         </li>
@@ -405,12 +400,12 @@
                         <li class="gear-label slot-bracers">
                             <a href="http://eu.battle.net/d3/en/item/wraps-of-clarity" data-d3tooltip="item/ClYI65jq4Q0SBwgEFRq00R8d8dNq1R3mFdsNHT51eQUdOydvJB23W1RNMItSOKsCQABQElgEYKsCgAFGpQHmFdsNrQHmFdsNtQHbLMrLuAH5xLisA8ABAxi00I39A1AAWAI" class="label-link d3-color-orange">
                                 <span class="item-name">Wraps of Clarity</span>
-                                <span class="bonus-value bonus-36 long-bonus       " style="display:none"><p>Lightning skills deal <span class="value">18</span><span class="value">%</span> more damage.</p></span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+482</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">94</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-67 long-bonus       " style="display:none"><p>Critical Hit Chance Increased by <span class="value">6.0</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-135 long-bonus       " style="display:none"><p>Reduces damage from melee attacks by <span class="value">6.0</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>Your Hatred Generators reduce your damage taken by <span class="d3-color-blue"><span class="value">32</span><span class="value">%</span></span> for 5 seconds.</p></span>
+                                <span class="bonus-value bonus-36 long-bonus       " style="display:none">Lightning skills deal <span class="value">18</span><span class="value">%</span> more damage.</span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+482</span> Dexterity</span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">94</span> Resistance to All Elements</span>
+                                <span class="bonus-value bonus-67 long-bonus       " style="display:none">Critical Hit Chance Increased by <span class="value">6.0</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus-135 long-bonus       " style="display:none">Reduces damage from melee attacks by <span class="value">6.0</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">Your Hatred Generators reduce your damage taken by <span class="d3-color-blue"><span class="value">32</span><span class="value">%</span></span> for 5 seconds.</span>
                             </a>
 
                         </li>
@@ -423,12 +418,12 @@
                                 <span class="weapon-dps">
                                     <span class="value">2974.2</span> DPS
                                 </span>
-                                <span class="bonus-value bonus-10 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">1510</span>–<span class="value">1828</span> Lightning Damage</p></span>
-                                <span class="bonus-value bonus-41 long-bonus       " style="display:none"><p><span class="value">+9</span><span class="value">%</span> Damage</p></span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+861</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-64 long-bonus       " style="display:none"><p>Critical Hit Damage Increased by <span class="value">130.0</span><span class="value">%</span> </p></span>
-                                <span class="bonus-value bonus-240 long-bonus       " style="display:none"><p>Monster kills grant <span class="value">+245</span> experience.</p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>Chance on hit to blast your enemy with Lightning, dealing <span class="d3-color-blue"><span class="value">287</span><span class="value">%</span></span> weapon damage as Lightning and then jumping to additional nearby enemies. Each enemy hit has their attack speed and movement speed reduced by <span class="value">30%</span> for 3 seconds. Jumps up to 5 targets.</p></span>
+                                <span class="bonus-value bonus-10 long-bonus       " style="display:none"><span class="value">+</span><span class="value">1510</span>–<span class="value">1828</span> Lightning Damage</span>
+                                <span class="bonus-value bonus-41 long-bonus       " style="display:none"><span class="value">+9</span><span class="value">%</span> Damage</span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+861</span> Dexterity</span>
+                                <span class="bonus-value bonus-64 long-bonus       " style="display:none">Critical Hit Damage Increased by <span class="value">130.0</span><span class="value">%</span> </span>
+                                <span class="bonus-value bonus-240 long-bonus       " style="display:none">Monster kills grant <span class="value">+245</span> experience.</span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">Chance on hit to blast your enemy with Lightning, dealing <span class="d3-color-blue"><span class="value">287</span><span class="value">%</span></span> weapon damage as Lightning and then jumping to additional nearby enemies. Each enemy hit has their attack speed and movement speed reduced by <span class="value">30%</span> for 3 seconds. Jumps up to 5 targets.</span>
                             </a>
 
                         </li>
@@ -438,13 +433,13 @@
                         <li class="gear-label slot-offHand">
                             <a href="http://eu.battle.net/d3/en/item/emimeis-duffel" data-d3tooltip="item/ClYIm7bvrg0SBwgEFW3ndeodyfq8oB0mtR2VHZsGAMsddEWniR2AZlxGMItSOPsCQABQElgEYPsCgAFGpQEmtR2VrQF-VrMutQFU6r5buAG_md-UDsABEhil4tDYAlAAWAI" class="label-link d3-color-orange">
                                 <span class="item-name">Emimei's Duffel</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+739</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+715</span> Vitality</p></span>
-                                <span class="bonus-value bonus-57 long-bonus       " style="display:none"><p>Attack Speed Increased by <span class="value">20.0</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-67 long-bonus       " style="display:none"><p>Critical Hit Chance Increased by <span class="value">9.5</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-103 long-bonus       " style="display:none"><p>Reduces all resource costs by <span class="value">8</span><span class="value">%</span>.</p></span>
-                                <span class="bonus-value bonus-185 long-bonus       " style="display:none"><p><span class="value">+11</span> Maximum Discipline (Demon Hunter Only)</p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>Bolas now explode instantly.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+739</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+715</span> Vitality</span>
+                                <span class="bonus-value bonus-57 long-bonus       " style="display:none">Attack Speed Increased by <span class="value">20.0</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus-67 long-bonus       " style="display:none">Critical Hit Chance Increased by <span class="value">9.5</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus-103 long-bonus       " style="display:none">Reduces all resource costs by <span class="value">8</span><span class="value">%</span>.</span>
+                                <span class="bonus-value bonus-185 long-bonus       " style="display:none"><span class="value">+11</span> Maximum Discipline (Demon Hunter Only)</span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">Bolas now explode instantly.</span>
                             </a>
 
                         </li>
@@ -454,12 +449,12 @@
                         <li class="gear-label slot-waist">
                             <a href="http://eu.battle.net/d3/en/item/chain-of-shadows" data-d3tooltip="item/ClYIxoSnoAMSBwgEFYDGMFgdOLLA1R3FRGRTHSCNN1QdQ05EUR3x02rVMItSOKUDQABQElgEYKoDgAFGpQHFRGRTrQHkMa8EtQHAp0LUuAH-4dn2AcABAhiAmoaDC1AAWAI" class="label-link d3-color-orange">
                                 <span class="item-name">Chain of Shadows</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+430</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+443</span> Vitality</p></span>
-                                <span class="bonus-value bonus-60 long-bonus       " style="display:none"><p><span class="value">+380</span> Armor</p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>Increases <span class="value">Bolas</span> Damage by <span class="value">14</span><span class="value">%</span> (Demon Hunter Only)</p></span>
-                                <span class="bonus-value bonus-127 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">146</span> Physical Resistance</p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>After using Impale, Vault costs no resource for 2 seconds.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+430</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+443</span> Vitality</span>
+                                <span class="bonus-value bonus-60 long-bonus       " style="display:none"><span class="value">+380</span> Armor</span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">Increases <span class="value">Bolas</span> Damage by <span class="value">14</span><span class="value">%</span> (Demon Hunter Only)</span>
+                                <span class="bonus-value bonus-127 long-bonus       " style="display:none"><span class="value">+</span><span class="value">146</span> Physical Resistance</span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">After using Impale, Vault costs no resource for 2 seconds.</span>
                             </a>
 
                         </li>
@@ -469,11 +464,11 @@
                         <li class="gear-label slot-rightFinger">
                             <a href="http://eu.battle.net/d3/en/item/restraint" data-d3tooltip="item/Co0BCMrNn70IEgcIBBXqNOh1Hay801Mdf46HzB1DTkRRHZinjsAd8dNq1R1mIwZQMItSOI4DQABQElgEYI4DajAKDAgAEKib-4ODgIDgChIgCJKW188OEgcIBBXKirPBMItSOABAAFASWASQAQXYATiAAUalAZinjsCtAZinjsC1ATZVXUS4AcvdgL8KwAEHGNTTwd4OUABYAqABkqK93g6gAdTTwd4O" class="label-link d3-color-green">
                                 <span class="item-name">Restraint</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+424</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+430</span> Vitality</p></span>
-                                <span class="bonus-value bonus-64 long-bonus       " style="display:none"><p>Critical Hit Damage Increased by <span class="value">49.0</span><span class="value">%</span> </p></span>
-                                <span class="bonus-value bonus-130 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">160</span> Lightning Resistance</p></span>
-                                <span class="bonus-value bonus-203 long-bonus       " style="display:none"><p><span class="value">+2647</span> Thorns Damage</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+424</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+430</span> Vitality</span>
+                                <span class="bonus-value bonus-64 long-bonus       " style="display:none">Critical Hit Damage Increased by <span class="value">49.0</span><span class="value">%</span> </span>
+                                <span class="bonus-value bonus-130 long-bonus       " style="display:none"><span class="value">+</span><span class="value">160</span> Lightning Resistance</span>
+                                <span class="bonus-value bonus-203 long-bonus       " style="display:none"><span class="value">+2647</span> Thorns Damage</span>
                             </a>
 
                         </li>
@@ -483,11 +478,11 @@
                         <li class="gear-label slot-leftFinger">
                             <a href="http://eu.battle.net/d3/en/item/focus" data-d3tooltip="item/Co0BCK_FyvcNEgcIBBWJqOd1HbRPiW4dG13PRB3egvzlHYQDodYd3DtTaB1mIwZQMItaOI8DQABQElgEYI8DajAKDAgAEIfxyYqBgICgGRIgCLOPksYCEgcIBBWHWaDBMIsCOABAAFASWASQAQDYATyAAUalAdw7U2itATKJx1q1ATZVXUS4Aa-M1LoOwAEEGJKivd4OUABYAqABkqK93g6gAdTTwd4O" class="label-link d3-color-green">
                                 <span class="item-name">Focus</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+585</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+590</span> Vitality</p></span>
-                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><p><span class="value">+</span><span class="value">118</span> Resistance to All Elements</p></span>
-                                <span class="bonus-value bonus-144 long-bonus       " style="display:none"><p><span class="value">+6893</span> Life after Each Kill</p></span>
-                                <span class="bonus-value bonus-240 long-bonus       " style="display:none"><p>Monster kills grant <span class="value">+233</span> experience.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+585</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+590</span> Vitality</span>
+                                <span class="bonus-value bonus-54 long-bonus       " style="display:none"><span class="value">+</span><span class="value">118</span> Resistance to All Elements</span>
+                                <span class="bonus-value bonus-144 long-bonus       " style="display:none"><span class="value">+6893</span> Life after Each Kill</span>
+                                <span class="bonus-value bonus-240 long-bonus       " style="display:none">Monster kills grant <span class="value">+233</span> experience.</span>
                             </a>
 
                         </li>
@@ -495,11 +490,11 @@
                         <li class="gear-label slot-neck">
                             <a href="http://eu.battle.net/d3/en/item/haunt-of-vaxo" data-d3tooltip="item/CoYBCL-w-LYFEgcIBBUXyVtdHazTmTkdmwYAyx1ADVULHX5Wsy4dyfq8oDCLUjiaA0AAUBJYBGCfA2ouCgwIABCSvs73hYCA4CQSHgiK72wSBwgEFejloMEwiwI4AEAAUBJYBJABANgBPIABRqUBQA1VC60BZiMGULUBsMVEZLgBsqaRuQfAAQcYrqTe1QtQAFgC" class="label-link d3-color-orange">
                                 <span class="item-name">Haunt of Vaxo</span>
-                                <span class="bonus-value bonus-51 long-bonus       "><p><span class="value">+633</span> Dexterity</p></span>
-                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><p><span class="value">+682</span> Vitality</p></span>
-                                <span class="bonus-value bonus-67 long-bonus       " style="display:none"><p>Critical Hit Chance Increased by <span class="value">10.0</span><span class="value">%</span></p></span>
-                                <span class="bonus-value bonus-275 long-bonus       " style="display:none"><p>Health Globes and Potions Grant <span class="value">+28218</span> Life.</p></span>
-                                <span class="bonus-value bonus--1 long-bonus       " style="display:none"><p>Summons shadow clones to your aid when you Stun an enemy. This effect may occur once every <span class="value">30</span> seconds.</p></span>
+                                <span class="bonus-value bonus-51 long-bonus       "><span class="value">+633</span> Dexterity</span>
+                                <span class="bonus-value bonus-53 long-bonus       " style="display:none"><span class="value">+682</span> Vitality</span>
+                                <span class="bonus-value bonus-67 long-bonus       " style="display:none">Critical Hit Chance Increased by <span class="value">10.0</span><span class="value">%</span></span>
+                                <span class="bonus-value bonus-275 long-bonus       " style="display:none">Health Globes and Potions Grant <span class="value">+28218</span> Life.</span>
+                                <span class="bonus-value bonus--1 long-bonus       " style="display:none">Summons shadow clones to your aid when you Stun an enemy. This effect may occur once every <span class="value">30</span> seconds.</span>
                             </a>
 
                         </li>
@@ -525,38 +520,18 @@
         </div>
     </div>
 
+    <div class="hero-skills">
+        <div ng-repeat="skill in hero.ActiveSkills">
 
-
-    @*Icons: When any of the d3 APIs reference an icon you can use the following url to reference it: "http://media.blizzard.com/d3/icons/<type>/<size>/<icon>.png".
-        The type can be "items" or "skills" based on the type of icon. For items size can be "small" or "large" and for skills size can be 21, 42 or 64.*@
-
-    @{
-        for (int i = 0; i < Model.Hero.skills.active.Length; i++)
-
-        {
-            D3DataContracts.Skill skill;
-            D3DataContracts.Rune rune;
-            if (i % 3 == 0)
-            {
-                <div class="row">
-                    @for (int j = i; j < i + 3; j++)
-                    {
-                        skill = Model.Hero.skills.active[j].skill;
-                        rune = Model.Hero.skills.active[j].rune;
-                        <div class="col-md-4">
-                            <div class="profile-container-skills">
-                                <p><strong> Skill: @skill.name</strong></p>
-                                <p>@skill.description</p>
-                                <p><strong>Rune: @rune.name</strong></p>
-                                <p>@rune.description</p>
-                            </div>
-                        </div>
-                    }
-
+            <div class="col-md-4">
+                <div class="profile-container-skills">
+                    <p><strong>Skill: {{skill.skill.name}}</strong></p>
+                    <p>{{skill.skill.description}}</p>
+                    <p><strong>Rune: {{skill.rune.name}}</strong></p>
+                    <p>{{skill.rune.description}}</p>
                 </div>
-            }
-        }
-    }
+            </div>
+        </div>
+    </div>
 </div>
 
-<script type="text/javascript" src="~/Scripts/D3ToolTips.js"></script>

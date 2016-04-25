@@ -14,6 +14,11 @@ namespace Diablo3DamageCalc
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Hero Profile SPA",
+                url: "Hero/{*catchall}",
+                defaults: new { controller = "Hero", action = "Index" });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -45,7 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Deserializer\JsonDeserialiser.cs" />
+    <Compile Include="Paragon\IParagonPage.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Paragon\ParagonPage2.cs" />
+    <Compile Include="Paragon\ParagonPage1.cs" />
+    <Compile Include="Paragon\ParagonPage3.cs" />
+    <Compile Include="Paragon\ParagonPage4.cs" />
+    <Compile Include="Paragon\ParagonPoints.cs" />
+    <Compile Include="Paragon\ParagonStat.cs" />
     <Compile Include="ProfileHeroDetails.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="PlayerProfile.cs" />

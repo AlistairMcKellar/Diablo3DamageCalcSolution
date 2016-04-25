@@ -6786,8 +6786,8 @@ button.close {
 .gear-slots li .sockets-wrapper { width:100%; height:100%; display:block; position:absolute; top:0; left:0; opacity:0.8 }
 .gear-slots li a:hover .sockets-wrapper { opacity:1 }
 .gear-slots li .sockets-wrapper .sockets-align { height: 88px; width: 66px; display:table-cell; vertical-align:middle }
-.gear-slots li .sockets-wrapper .socket { display:inline-block; vertical-align:middle; width:32px; height:32px; background:url(../../../images/profile/hero/skill-overlays.png) 0 -71px no-repeat; text-align:center; position:relative; left:1px; }
-.ie6 .gear-slots li .sockets-wrapper .socket {  background-image:url(../../../images/profile/hero/skill-overlays.gif) }
+.gear-slots li .sockets-wrapper .socket { display:inline-block; vertical-align:middle; width:32px; height:32px; background:url(images/skill-overlays.png) 0 -71px no-repeat; text-align:center; position:relative; left:1px; }
+.ie6 .gear-slots li .sockets-wrapper .socket {  background-image:url(images/skill-overlays.gif) }
 .gear-slots li .sockets-wrapper .socket .gem { margin:6px auto 0;  width:20px; height:20px }
 
 /* slot sizes */
@@ -6987,6 +6987,8 @@ button.close {
     */
 /* paper doll */
 .paperdoll { width: 725px; min-height: 490px; right: 4px; top: 155px }
+
+.paperdoll  span {margin: 0; padding:0; border:0; outline:0;}
 .paperdoll .weapon-flourish { width:128px; height:166px; background-repeat:no-repeat; position:absolute; }
 .paperdoll .weapon-flourish.main-hand-flourish { top:258px; left:200px; }
 .paperdoll .weapon-flourish.off-hand-flourish { top:258px; left:416px; }
@@ -7000,24 +7002,26 @@ button.close {
 
 .paperdoll .gear-slots { margin: 0 0 0 209px; position: relative; z-index: 3; }
 .paperdoll .gear-slots .d3-icon-item { box-shadow: 0 0 9px rgba(0,0,0,0.09), 0 2px 5px rgba(0,0,0,0.5); }
-.followers .d3-icon-item, .followers .icon-item-gradient, .followers .icon-item-inner { border-radius:3px; }
 .paperdoll .gear-slots .item-dye { display:block; position:absolute; left:-5px; bottom:-1px; width:21px; height:21px; background:url(../../images/profile/hero/bg-dye.png) 0 -1px no-repeat; }
 .paperdoll .gear-slots .item-dye img { width:19px; height:19px; }
 .paperdoll .gear-slots .item-transmog { display:block; position:absolute; top:0; right:0; padding:4px; }
 .paperdoll .gear-slots .empty-icon { cursor:help; box-shadow:none; border:none; padding:1px; }
 .paperdoll .gear-slots .empty-icon .icon-item-inner { box-shadow:none; border:0; padding:1px; }
 
-.paperdoll .gear-labels { width: 726px; min-height: 490px; position: absolute; top: 0; left: 0; z-index: 2; }
-.paperdoll .gear-labels .gear-label { position: absolute; width: 186px; font-size: 11px; padding-right: 5px; }
-.paperdoll .gear-labels .gear-label .label-link { display: block; }
-.paperdoll .gear-labels .gear-label .item-name { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:186px; display:block; }
+.paperdoll .gear-labels { width: 720px; min-height: 490px; position: absolute; top: 0; left:1px; z-index: 2; }
+.paperdoll .gear-labels .gear-label { position: absolute; width: 170px; font-size: 11px; padding-right: 2px; }
+.paperdoll .gear-labels .gear-label .label-link { display: block;}
+.paperdoll .gear-labels .gear-label .item-name { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:170px; display:block; 
+                                                 text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+                                                 font-size: 14px;
+}
 .paperdoll .gear-labels .bonus-value,
 .paperdoll .gear-labels .weapon-dps { display:block; color:#c4b9a7; font-size:14px; text-shadow:1px 1px 0 #000; position:relative;}
 .paperdoll .gear-labels .weapon-dps { color:#c6aa75; font-size:11px; margin-bottom:-4px; top:-2px;}
 .paperdoll .gear-labels .weapon-dps .value { font-size:16px; }
 .paperdoll .gear-labels .bonus-value.long-bonus { font-size:11px; line-height:12px; top:2px;}
-.paperdoll .gear-labels .bonus-value p { margin:0; }
-.paperdoll .gear-labels .bonus-value p .value { font-size:14px; color:#d7cbb7; }
+.paperdoll .gear-labels .bonus-value { margin:0; }
+.paperdoll .gear-labels .bonus-value .value { font-size:14px; color:#d7cbb7; }
 .paperdoll .gear-labels .slot-head,
 .paperdoll .gear-labels .slot-neck,
 .paperdoll .gear-labels .slot-bracers,
@@ -7030,7 +7034,7 @@ button.close {
 .paperdoll .gear-labels .slot-hands,
 .paperdoll .gear-labels .slot-legs,
 .paperdoll .gear-labels .slot-leftFinger,
-.paperdoll .gear-labels .slot-mainHand { text-align: right; left: 0; }
+.paperdoll .gear-labels .slot-mainHand { text-align: right; left:35px; }
 .paperdoll .gear-labels .slot-head { top: 6px; }
 .paperdoll .gear-labels .slot-neck { top: 75px; }
 .paperdoll .gear-labels .slot-bracers { top: 144px; }
@@ -7058,11 +7062,10 @@ button.close {
 .paperdoll .d3-icon-item-green { border-color: #87a73d; }
 
 .paperdoll ul {list-style-type: none;}
-.paperdoll li {display: block; outline: none; text-align: center;}
+.paperdoll li {display: block; outline: none;}
 
-.paperdoll .gear-lines { width: 332px; height: 418px; position: absolute; top: 14px; left: 197px; z-index: 1; }
-.paperdoll .gear-lines li { position: absolute; background: url("../../images/profile/hero/inventory-lines.png"); }
-.ie6 .paperdoll .gear-lines li { background-image: url("../../images/profile/hero/inventory-lines.gif"); }
+.paperdoll .gear-lines { width: 332px; height: 418px; position: absolute; top: 14px; left: 213px; z-index: 1; }
+.paperdoll .gear-lines li { position: absolute; background: url("images/inventory-lines.png"); }
 .paperdoll .gear-lines .slot-head { width: 134px; height: 1px; top: 0; right: 0; background-position: 100% 0; }
 .paperdoll .gear-lines .slot-waist { width: 124px; height: 12px; top: 196px; right: 0; background-position: 100% -196px; }
 .paperdoll .gear-lines .slot-torso { width: 125px; height: 24px; top: 84px; left: 0; background-position: 0 -84px; }
@@ -7137,16 +7140,16 @@ button.close {
 
 .profile-overview .skills .active-skills { height:163px; padding:16px 0 17px; border-bottom:1px solid #252018; margin-bottom:17px; }
 .profile-overview .skills .active-skills li { float: left; width:247px; padding:2px 0 0 12px; margin: 0 0 10px 0; position: relative; }
-.profile-overview .skills .active-skills .empty-skill { width:42px; height:42px; display:block; display:inline-block; background:url(../../images/profile/hero/skill-overlays.png) -47px 0; }
-.ie6 .profile-overview .skills .active-skills .empty-skill { background-image: url("../../images/profile/hero/skill-overlays.gif"); }
+.profile-overview .skills .active-skills .empty-skill { width:42px; height:42px; display:block; display:inline-block; background:url(images/skill-overlays.png) -47px 0; }
+.ie6 .profile-overview .skills .active-skills .empty-skill { background-image: url("images/skill-overlays.gif"); }
 .profile-overview .skills .active-skills .empty-skill.unlocked { background-position:-131px -42px; }
 .profile-overview .skills .active-skills .empty-skill.locked-2 { background-position:-47px 0; }
 .profile-overview .skills .active-skills .empty-skill.locked-4 { background-position:-89px 0; }
 .profile-overview .skills .active-skills .empty-skill.locked-9 { background-position:-131px 0; }
 .profile-overview .skills .active-skills .empty-skill.locked-14 { background-position:-47px -42px; }
 .profile-overview .skills .active-skills .empty-skill.locked-19 { background-position:-89px -42px; }
-.profile-overview .skills .active-skills .slot { display:block; width:22px; height:22px; background: url("../../images/profile/hero/skill-overlays.png") 0 0; position: absolute; top:-1px; left:-1px; }
-.ie6 .profile-overview .skills .active-skills .slot { background-image: url("../../images/profile/hero/skill-overlays.gif"); }
+.profile-overview .skills .active-skills .slot { display:block; width:22px; height:22px; background: url("images/skill-overlays.png") 0 0; position: absolute; top:-1px; left:-1px; }
+.ie6 .profile-overview .skills .active-skills .slot { background-image: url("images/skill-overlays.gif"); }
 .profile-overview .skills .active-skills .slot.slot-primary { background-position:0 -1px; }
 .profile-overview .skills .active-skills .slot.slot-secondary { background-position: -21px -1px; }
 .profile-overview .skills .active-skills .slot.slot-1 { background-position:0 -23px; }
@@ -7174,118 +7177,6 @@ button.close {
 .stats-toggle { display: block; height: 50px; margin: 0 30px; line-height: 50px; text-align: center; outline: none; background: url("../../images/profile/hero/bg-stats-toggle.png") 50% 0 no-repeat; }
 .stats-toggle.opened { background: url("../../images/profile/hero/bg-stats-toggle-on.png"); }
 
-/* Kanai's Cube Powers */
-.profile-overview .kanai-cube { width: 546px; margin-top: 20px; float: right; position: relative; }
-.profile-overview .kanai-cube .legendary-power-wrapper { display: inline-block; padding: 25px 0px; width: 115px; height: 190px; }
-.profile-overview .kanai-cube .legendary-power-wrapper:nth-of-type(even) { margin: 0px 20px; }
-.profile-overview .kanai-cube .legendary-power-container { width: 115px; height: 205px; background-repeat: no-repeat; background-position: center center; }
-.profile-overview .kanai-cube .legendary-power-container.legendary-power-weapon { background-image: url("../../images/icons/Weapon-Empty.png") }
-.profile-overview .kanai-cube .legendary-power-container.legendary-power-armor { background-image: url("../../images/icons/Armor-Empty.png") }
-.profile-overview .kanai-cube .legendary-power-container.legendary-power-jewelry { background-image: url("../../images/icons/Jewelry-Empty.png") }
-.profile-overview .kanai-cube .legendary-power-container.is-active { background-image: url("../../images/icons/Active-Default.png") }
-.profile-overview .kanai-cube .legendary-power-container.is-active:hover { background-image: url("../../images/icons/Active-Hover.png") }
-.profile-overview .kanai-cube .legendary-power-container .legendary-power-item { display: block; width: 115px; height: 190px; background-repeat: no-repeat; background-position: center center; }
-.profile-overview .kanai-cube .legendary-power-wrapper .legendary-power-name { text-align: center; }
-
-/* followers */
-.profile-followers { margin: 30px; position: relative; overflow:hidden; }
-.ie6 .profile-followers .section-body { overflow:hidden; width:914px; }
-.profile-followers .follower-wrapper { display:block; float:left; width:250px; height:350px; padding:0 18px; background:#19160d url(../../images/profile/hero/followers.jpg) no-repeat; margin-right:26px; }
-.ie6 .profile-followers .follower-wrapper { margin-right:16px; }
-.profile-followers .follower-wrapper.follower-templar { background-position:0 0; margin-right:0; }
-.profile-followers .follower-wrapper.follower-scoundrel { background-position:-286px 0; }
-.profile-followers .follower-wrapper.follower-enchantress { background-position:-572px 0; }
-.profile-followers .follower-wrapper .follower-header {height:76px; display:block;}
-.profile-followers .follower-wrapper .header-3 { font-weight:bold; font-size:22px; color:#ead8b9; text-transform:none; text-shadow:1px 1px 2px #000; padding-top:25px; letter-spacing:-0.15em; }
-.ko-kr .profile-followers .follower-wrapper .header-3 { padding-top: 37px; font-size: 18px; }
-.profile-followers .follower-wrapper.locked .header-3 { color:#4e4536; }
-
-.profile-followers .follower-wrapper .level { display:block; font-size:11px; text-transform:uppercase; text-shadow:1px 1px 2px #000; color: #A99877; }
-.profile-followers .follower-wrapper a:hover .level { color: #fff; }
-
-.profile-followers .follower-wrapper .items { width:142px; height:186px; position:relative; float:right; }
-.profile-followers .follower-wrapper .items .slot { position:absolute; display:block; }
-.profile-followers .follower-wrapper .items span.slot { cursor: help; }
-.profile-followers .follower-wrapper .items .slot.empty-offhand { background:url("../../images/profile/hero/disabled-offhand-followers.gif") 0 0 no-repeat; }
-.ie67 .profile-followers .follower-wrapper .items .slot.empty-offhand,
-.ie8  .profile-followers .follower-wrapper .items .slot.empty-offhand { background:none; }
-.ie8  .profile-followers .follower-wrapper .items .slot.empty-offhand .icon-item-default,
-.ie67 .profile-followers .follower-wrapper .items .slot.empty-offhand .icon-item-default { display:none; }
-.profile-followers .follower-wrapper .items .slot.empty-offhand .icon-item-default { display:block; opacity:0.3; }
-
-.profile-followers .follower-wrapper .items .slot.empty-offhand .icon-item-inner { width:48px; height:96px; margin:1px; }
-
-.profile-followers .follower-wrapper .items .slot-special,
-.profile-followers .follower-wrapper .items .slot-neck { top:37px; width:42px; height:42px; }
-.profile-followers .follower-wrapper .items .slot-special .sockets-align,
-.profile-followers .follower-wrapper .items .slot-neck .sockets-align { width:42px; height:42px; }
-
-.profile-followers .follower-wrapper .items .slot-special { left:34px; }
-.profile-followers .follower-wrapper .items .slot-special .slot-special-border {width:48px; height:48px; background:url("../../images/profile/hero/border-followerspecial.gif") 0 0 no-repeat; position:absolute; top:-3px; left:-3px;}
-.profile-followers .follower-wrapper .items .slot-neck { left:82px; }
-.profile-followers .follower-wrapper .items .slot-special .icon-item-inner,
-.profile-followers .follower-wrapper .items .slot-neck .icon-item-inner { width:38px; height:38px; }
-
-.profile-followers .follower-wrapper .items .slot-mainHand,
-.profile-followers .follower-wrapper .items .slot-offHand { top:86px; height:98px; width:50px; }
-.profile-followers .follower-wrapper .items .slot-offHand .sockets-align,
-.profile-followers .follower-wrapper .items .slot-mainHand .sockets-align {  height:98px; width:50px; }
-.profile-followers .follower-wrapper .items .slot-mainHand { left:-1px; }
-.profile-followers .follower-wrapper .items .slot-offHand { left:54px; }
-.profile-followers .follower-wrapper .items .slot-mainHand .icon-item-inner,
-.profile-followers .follower-wrapper .items .slot-offHand .icon-item-inner { height:94px; width:46px; background-size:100% }
-
-.profile-followers .follower-wrapper .items .slot-rightFinger,
-.profile-followers .follower-wrapper .items .slot-leftFinger { left:109px; width:32px; height:32px; }
-.profile-followers .follower-wrapper .items .slot-rightFinger .sockets-align,
-.profile-followers .follower-wrapper .items .slot-leftFinger .sockets-align {  width:31px; height:32px; }
-
-.profile-followers .follower-wrapper .items .slot-rightFinger { top:86px; }
-.profile-followers .follower-wrapper .items .slot-leftFinger { top:124px; }
-.profile-followers .follower-wrapper .items .slot-rightFinger .icon-item-inner,
-.profile-followers .follower-wrapper .items .slot-leftFinger .icon-item-inner { width:28px; height:28px; }
-
-.profile-followers .follower-wrapper .items li { text-align:center; }
-.profile-followers .follower-wrapper .items .sockets-wrapper { width:100%; height:100%; display:block; position:absolute; top:0; left:0; opacity:0.8; }
-.profile-followers .follower-wrapper .items a:hover .sockets-wrapper { opacity:1; }
-.profile-followers .follower-wrapper .items .sockets-align { height: 88px; width: 66px; display:table-cell; vertical-align:middle; }
-.profile-followers .follower-wrapper .items .socket { display:inline-block; vertical-align:middle; width:28px; height:28px; background:url(../../images/profile/hero/follower-socket.png) 0 0 no-repeat; text-align:center; position:relative; left:1px; }
-.ie6 .profile-followers .follower-wrapper .items .socket {  background:none; }
-.profile-followers .follower-wrapper .items .socket .gem { margin:4px auto 0;  width:20px; height:20px; }
-
-.profile-followers .follower-wrapper .skills { float:left; width:106px; margin-top:34px; margin-left:1px; }
-.profile-followers .follower-wrapper .skill { height:34px; width:106px;  }
-.profile-followers .follower-wrapper .skill .icon-cell { width:21px; }
-.profile-followers .follower-wrapper .skill .icon-cell .d3-icon { float:left; margin-top:1px; display:block; box-shadow: 0 0 3px rgba(0,0,0,0.5); }
-.profile-followers .follower-wrapper .skill .name-cell { vertical-align:middle; color: #7B6D55; }
-.profile-followers .follower-wrapper .skill .name { font-size:11px; width:68px; padding-left:6px; display:block; float:left; line-height:1.4em; }
-.profile-followers .follower-wrapper .skill:hover { cursor:pointer; }
-.profile-followers .follower-wrapper .skill.empty-skill { cursor:default; }
-.profile-followers .follower-wrapper .skill.empty-skill:hover .icon-cell { cursor:help; }
-.profile-followers .follower-wrapper .skill.empty-unlocked .icon-cell { background:url(../../images/profile/hero/follower-skill-unlocked.jpg) no-repeat 0 50% }
-.profile-followers .follower-wrapper .skill:hover .name { color:#FFF; }
-
-.profile-followers .follower-wrapper .adventure-stats { padding-top:37px; padding-left:6px; }
-.es-mx .profile-followers .follower-wrapper .adventure-stats,
-.pt-br .profile-followers .follower-wrapper .adventure-stats { padding-top:32px; }
-.fr-fr .profile-followers .follower-wrapper .adventure-stats,
-.pl-pl .profile-followers .follower-wrapper .adventure-stats,
-.ru-ru .profile-followers .follower-wrapper .adventure-stats { padding-top:28px; }
-.profile-followers .follower-wrapper .adventure-stats li { width:80px; float:left; }
-.profile-followers .follower-wrapper .adventure-stats .value { color:#b6aa94; font-weight:bold; font-size:14px; width:80px; display:block; }
-.profile-followers .follower-wrapper .adventure-stats .label { font-size:11px; width:70px; display:block; margin-top:0px; color:#7B6D55; line-height:12px; }
-.profile-followers .follower-wrapper.locked .adventure-stats .value,
-.profile-followers .follower-wrapper.locked .adventure-stats .label,
-.profile-followers .follower-wrapper        .adventure-stats .empty-stat .value,
-.profile-followers .follower-wrapper        .adventure-stats .empty-stat .label { color:#4e4536; }
-
-
-
-/* progression */
-.page-section.progression,
-.page-section.profile-followers { margin:0 42px; }
-.page-section.progression { margin-bottom:30px; }
-
 /* class specific */
 .barbarian-male .profile-sheet { background-image: url("../../images/profile/hero/paperdoll/barbarian-male.jpg"); }
 .barbarian-female .profile-sheet { background-image: url("../../images/profile/hero/paperdoll/barbarian-female.jpg"); }
@@ -7300,39 +7191,13 @@ button.close {
 .wizard-male .profile-sheet { background-image: url("../../images/profile/hero/paperdoll/wizard-male.jpg"); }
 .wizard-female .profile-sheet { background-image: url("../../images/profile/hero/paperdoll/wizard-female.jpg"); }
 
-
-/* progress bar */
-.progression .progression-bar { margin:12px 0 0 15px; }
-.progression .progression-bar .bar-wrapper { width:879px; height:28px; background:url(../../images/profile/hero/hero-progression.png) no-repeat; position:relative; }
-.progression .progression-bar .bar-wrapper .bar-fill { position:absolute; height:28px; top:4px; background:url(../../images/profile/hero/hero-progression.png) no-repeat; }
-.progression .progression-bar .bar-wrapper .marker { display:block; position:absolute; top:3px; width:24px; height:24px; background:url(../../images/profile/hero/hero-progression.png) no-repeat -915px -3px; cursor: help; }
-.progression .progression-bar .bar-wrapper .marker.normal { left:-1px; }
-.progression .progression-bar .bar-wrapper .marker.nightmare { left:215px; }
-.progression .progression-bar .bar-wrapper .marker.hell { left:431px; }
-.progression .progression-bar .bar-wrapper .marker.inferno { left:647px; }
-.progression .progression-bar .bar-wrapper .marker:hover { background-position: -891px -3px; }
-.progression .progression-bar .bar-wrapper .marker.complete { background-position:-907px -55px; }
-.progression .progression-bar .bar-wrapper .marker.complete:hover { background-position:-884px -55px; }
-.progression .progression-bar.hardcore-progression .bar-wrapper .marker.complete { background-position:-907px -29px; }
-.progression .progression-bar.hardcore-progression .bar-wrapper .marker.complete:hover { background-position:-884px -29px; }
-.progression .progress-arrow-hitbox { margin-left:-3px; }
-.progression .progress-arrow-hitbox .progress-arrow { background:url(../../images/profile/hero/hero-progression.png) no-repeat -931px -58px; }
-.progression .progress-arrow-hitbox:hover .progress-arrow { background-position: -947px -58px; }
-.progression .progression-bar.normal-progression .bar-wrapper .bar-fill { background-position:0 -58px; }
-.progression .progression-bar.hardcore-progression .bar-wrapper .bar-fill { background-position:0 -31px; }
-.progression .progression-bar.hardcore-progression .progress-arrow-hitbox .progress-arrow { background-position:-931px -32px; }
-.progression .progression-bar.hardcore-progression .progress-arrow-hitbox:hover .progress-arrow { background-position:-947px -32px; }
-
-.progression .difficulty-labels { padding-left:22px; position:relative; top:-3px; }
-.progression .difficulty-labels .difficulty-label { width:216px; }
-.progression .difficulty-labels .difficulty-label .label-marker { width:186px; margin:0 0 0 1px; }
-
 /* last updated */
 .profile .last-updated { margin: 30px 0; }
 
-.ie6 .progression .progression-bar .bar-wrapper { background-image:url(../../images/profile/hero/hero-progression.gif); }
-.ie6 .progression .progression-bar .bar-wrapper .bar-fill { background-image:url(../../images/profile/hero/hero-progression.gif); }
-.ie6 .progression .progression-bar .bar-wrapper .marker { background-image:url(../../images/profile/hero/hero-progression.gif); }
+.hero-skills .col-md-4 {padding-left:5px; padding-right:5px;}
 
-.profile-container-top {outline: solid; outline-color: black; outline-width: 1px; height: 500px; margin-top: 5px; margin-left:2px; margin-right:2px; margin-bottom: 5px;}
-.profile-container-skills {outline: solid; outline-color: black; outline-width: 1px; height: 255px; margin-top: 5px; margin-left:2px; margin-right:2px; margin-bottom: 5px;}
+.profile-container-top {border:2px solid black; background-color:lightgray; border-radius: 12px;  height: 500px; margin-top: 5px; margin-left:1px; margin-right:1px; margin-bottom: 5px; }
+.profile-container-skills {border:1px solid black; background-color:lightgray; border-radius:12px; height: 300px; margin-top: 5px; margin-left:2px; margin-right:2px; margin-bottom: 5px; }
+
+.profile-container-top p { margin: 5px 5px 5px 5px; }
+.profile-container-skills p { margin: 5px 5px 5px 5px;}
